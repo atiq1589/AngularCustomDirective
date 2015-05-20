@@ -5,78 +5,14 @@
 	</head>
 	<body ng-app="test">
 		<h1>Hello</h1>
-		<div ng-controller="DirectiveController">
-			{{a + b}}
-			<product data="list" callback="popup()">
-			
-			</product>
-			<complex data = "ComplexData"></complex>
+		<div ng-controller="DirectiveController">{{a + b}}
+			<product data="list" callback="popup(param)"></product>
+			<complex data="ComplexData"></complex>
 			<div ng-click="popup(1)">Test</div>
-			</div>
-		<script src="angular.js"></script>
-		<script>
-			var app = angular.module("test",[]);
-				app.controller("DirectiveController",['$scope',function($scope){
-					$scope.a = 2;
-					$scope.b = 3;
-					$scope.list = [1,2,3,4,5,6,7,8,9,10];
-					$scope.ASD = {a : "ASD" };
-					$scope.popup = function(d){
-						alert(d);
-					};
-					$scope.ComplexData = {
-						func : function(d){
-							alert(d);
-						},
-						name : "Md. Atiqul Islam"
-					}
-				}]);
-				
-				app.directive('product', function(){
-					var directive = {};
-					directive.restrict = 'E';
-					directive.transclude = true;
-					directive.templateUrl = "ngProductSize.html";
-					
-					directive.controller = function($scope){
-						$scope.click = function(d){
-							alert(d);	
-							$scope.func(d);
-						};
-					}
-					directive.scope = {
-						data : '=data',
-						func : "&callback"
-					};
-					directive.compile = function( ele, attr){
-						var linkFunction = function name($scope, ele, attr) {
-							
-						};
-						return linkFunction;	
-					};
-					return directive;
-					
-				});
-				
-				app.directive('complex', function(){
-					var directive = {};
-					directive.restrict = 'E';
-					directive.transclude = true;
-					directive.templateUrl = "complex.html";
-					
-					directive.scope = {
-						data : '=data'
-					};
-					directive.compile = function( ele, attr){
-						var linkFunction = function name($scope, ele, attr) {
-							
-						};
-						return linkFunction;	
-					};
-					return directive;
-					
-				});
-		</script>
+		</div>
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="scripts/controller.js"></script>
+		<script src="scripts/directive.js"></script>
 	</body>
 
 </html>
