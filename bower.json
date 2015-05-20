@@ -1,0 +1,11 @@
+{
+  "name": "Angular Custom Directive",
+  "version": "0.0.1",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Md. Atiqul Islam"
+  ],
+  "license": "MIT"
+}
