@@ -1,0 +1,24 @@
+{
+  "name": "Angular_Custom_Directive",
+  "version": "0.0.1",
+  "description": "custom directive",
+  "main": "angular.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atiq1589/AngularCustomDirective.git"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "custom"
+  ],
+  "author": "MD. ATIQUL ISLAM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atiq1589/AngularCustomDirective/issues"
+  },
+  "homepage": "https://github.com/atiq1589/AngularCustomDirective"
+}
