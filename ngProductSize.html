@@ -1,7 +1,7 @@
-<div ng-repeat="d in data">
-	<button style="padding:10px" ng-click="func({param: d})"> {{ d }} </button>
+<div>
+	<span ng-repeat="d in data" style="margin:10px"><button style="padding:10px" ng-click="func({param: d})"> {{ d }} </button></span>
 </div>
+
 <div ng-repeat="d in data">
-	<button style="padding:10px" ng-click="click( d )"> {{ d }} </button>
+	<span><button style="margin:10px" ng-click="click( d )"> {{ d }} </button></span>
 </div>
-<div ng-transclude=""></div>

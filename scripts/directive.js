@@ -4,13 +4,12 @@ var app = angular.module("customDirective", []);
 app.directive('product', function () {
 	var directive = {};
 	directive.restrict = 'E';
-	directive.transclude = true;
 	directive.templateUrl = "ngProductSize.html";
 
 	directive.controller = function ($scope) {
 		$scope.click = function (d) {
 			alert(d);
-			$scope.func(d);
+			$scope.func({param: 10*d});
 		};
 	}
 	directive.scope = {
@@ -30,7 +29,6 @@ app.directive('product', function () {
 app.directive('complex', function () {
 	var directive = {};
 	directive.restrict = 'E';
-	directive.transclude = true;
 	directive.templateUrl = "complex.html";
 
 	directive.scope = {
