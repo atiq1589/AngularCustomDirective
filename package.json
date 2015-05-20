@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/atiq1589/AngularCustomDirective/issues"
   },
-  "homepage": "https://github.com/atiq1589/AngularCustomDirective"
+  "homepage": "https://github.com/atiq1589/AngularCustomDirective",
+  "dependencies": {
+    "angular": "^1.3.15"
+  }
 }
